@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Todo List</h1>
+      <form id="new-task-form" class="new-task">
+        <input id="task-title" type="text" placeholder="Task title" aria-label="Task title" required />
+        <select id="priority" name="priority">
+          <option value="High priority">High priority</option>
+          <option value="Medium priority">Medium priority</option>
+          <option value="Low priority">Low priority</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+    </header>
+
+    <main class="board">
+      <section class="column" data-status="todo" aria-label="Todo">
+        <h2>Todo</h2>
+        <div class="column-drop" data-status="todo" id="col-todo" role="list"></div>
+      </section>
+      <section class="column" data-status="wip" aria-label="Work in Progress">
+        <h2>Work in Progress</h2>
+        <div class="column-drop" data-status="wip" id="col-wip" role="list"></div>
+      </section>
+      <section class="column" data-status="testing" aria-label="Testing">
+        <h2>Testing</h2>
+        <div class="column-drop" data-status="testing" id="col-test" role="list"></div>
+      </section>
+      <section class="column" data-status="done" aria-label="Done">
+        <h2>Done</h2>
+        <div class="column-drop" data-status="done" id="col-done" role="list"></div>
+      </section>
+    </main>
+
+    <!-- Используем ES-модули: бандлер не требуется -->
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+  </html>
+
