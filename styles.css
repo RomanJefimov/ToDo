@@ -134,6 +134,13 @@ body {
   font-size: 12px;
 }
 
+select {
+  border-radius: 15%;
+  background-color:#12172a;
+  color:#9ca3af;
+  border-color: #1f2937;
+}
+
 /* Кнопка удаления карточки */
 .card-delete {
   position: absolute;
